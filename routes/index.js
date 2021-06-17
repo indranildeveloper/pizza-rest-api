@@ -17,6 +17,8 @@ router.post("/login", loginController.login);
 router.get("/me", auth, userController.me);
 router.post("/refresh", refreshController.refresh);
 router.post("/logout", auth, loginController.logout);
+// Cart Route
+router.post("/products/cart-items", productController.getProducts);
 // Products Routes
 router.post("/products", [auth, admin], productController.store);
 router.put("/products/:id", [auth, admin], productController.update);
