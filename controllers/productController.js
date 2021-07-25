@@ -152,6 +152,7 @@ const productController = {
     } catch (err) {
       return next(CustomErrorHandler.serverError());
     }
+    return res.json(documents)
   },
 };
 
